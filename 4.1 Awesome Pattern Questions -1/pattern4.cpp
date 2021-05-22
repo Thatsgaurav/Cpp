@@ -14,11 +14,11 @@ int main()
         {
             if (j <= n - i)
             {
-                cout << " ";
+                cout << "  ";
             }
             else
             {
-                cout << "*";
+                cout << "* ";
             }
         }
         cout << endl;
