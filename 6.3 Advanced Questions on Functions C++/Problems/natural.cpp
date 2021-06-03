@@ -3,18 +3,38 @@
 #include <iostream>
 using namespace std;
 
-int main()
+// Function to convert octal to decimal
+int octalToDecimal(int n)
 {
-    int n, sum = 0;
+    int num = n;
+    int dec_value = 0;
 
-    cout << "Enter a positive integer: ";
-    cin >> n;
+    // Initializing base value to 1, i.e 8^0
+    int base = 1;
 
-    for (int i = 1; i <= n; ++i)
+    int temp = num;
+    while (temp)
     {
-        sum += i;
+
+        // Extracting last digit
+        int last_digit = temp % 10;
+        temp = temp / 10;
+
+        // Multiplying last digit with appropriate
+        // base value and adding it to dec_value
+        dec_value += last_digit * base;
+
+        base = base * 8;
     }
 
-    cout << "Sum = " << sum;
-    return 0;
+    return dec_value;
+}
+
+// Driver program to test above function
+int main()
+{
+    int num;
+    cin >> num;
+
+    cout << octalToDecimal(num) << endl;
 }
