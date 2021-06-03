@@ -1,32 +1,28 @@
 // Binary to decimal
 
 #include <iostream>
-#include <cmath>
-
 using namespace std;
 
-int convertBinaryToDecimal(long long);
-
-int main()
+int binaryToDecimal(int n)
 {
-    long long n;
-
-    cout << "Enter a binary number: ";
-    cin >> n;
-
-    cout << n << " in binary = " << convertBinaryToDecimal(n) << "in decimal";
-    return 0;
+    int ans = 0;
+    int x = 1;
+    while (n > 0)
+    {
+        int y = n % 10;
+        ans += x * y;
+        x *= 2;
+        n /= 10;
+    }
+    return ans;
 }
 
-int convertBinaryToDecimal(long long n)
+int32_t main()
 {
-    int decimalNumber = 0, i = 0, remainder;
-    while (n != 0)
-    {
-        remainder = n % 10;
-        n /= 10;
-        decimalNumber += remainder * pow(2, i);
-        ++i;
-    }
-    return decimalNumber;
+    int n;
+    cin >> n;
+
+    cout << binaryToDecimal(n) << endl;
+
+    return 0;
 }
