@@ -1,30 +1,26 @@
-// Finding Max and Min element
+// C++ program to find the min and max element
+// of Vector using *min_element() in STL
 
-#include <iostream>
-#include <climits>
+#include <bits/stdc++.h>
 using namespace std;
 
 int main()
 {
-    int n;
-    cin >> n;
+    // Get the vector
+    vector<int> a = {1, 45, 54, 71, 76, 12};
 
-    int arr[n];
-    for (int i = 0; i < n; i++)
-    {
-        cin >> arr[i];
-    }
+    // Print the vector
+    cout << "Vector: ";
+    for (int i = 0; i < a.size(); i++)
+        cout << a[i] << " ";
+    cout << endl;
 
-    int maxNo = INT_MIN;
-    int minNo = INT_MAX;
+    // Find the min element
+    cout << "\nMin Element = "
+         << *min_element(a.begin(), a.end());
 
-    for (int i = 0; i < n; i++)
-    {
-        maxNo = max(maxNo, arr[i]);
-        minNo = min(minNo, arr[i]);
-        
-    }
-    cout << maxNo << " " << minNo << endl;
-
+    // Find the max element
+    cout << "\nMax Element = "
+         << *max_element(a.begin(), a.end());
     return 0;
 }
