@@ -44,3 +44,11 @@ int main()
 
     return 0;
 }
+
+// Time Complexity of Binary Search
+
+// After first iteration, length of array
+// After second iteration, length of array
+// After third iteration, length of array
+// After k iterations, length of array
+// Let the length of array become 1 after k iterations
