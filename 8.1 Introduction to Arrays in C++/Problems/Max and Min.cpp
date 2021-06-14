@@ -1,6 +1,7 @@
 // Finding Max and Min element
 
 #include <iostream>
+#include <climits>
 using namespace std;
 
 int main()
@@ -14,7 +15,16 @@ int main()
         cin >> arr[i];
     }
 
-    
+    int maxNo = INT_MIN;
+    int minNo = INT_MAX;
 
-        return 0;
+    for (int i = 0; i < n; i++)
+    {
+        maxNo = max(maxNo, arr[i]);
+        minNo = min(minNo, arr[i]);
+        
+    }
+    cout << maxNo << " " << minNo << endl;
+
+    return 0;
 }
