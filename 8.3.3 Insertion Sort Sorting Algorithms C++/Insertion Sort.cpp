@@ -1,34 +1,47 @@
-// Insertion Sort
-
-#include <iostream>
+// C++ program for insertion sort
+#include <bits/stdc++.h>
 using namespace std;
 
-int main()
+/* Function to sort an array using insertion sort*/
+void insertionSort(int arr[], int n)
 {
-    int n;
-    cin >> n;
-
-    int arr[n];
-    for (int i = 0; i < n; i++)
+    int i, key, j;
+    for (i = 1; i < n; i++)
     {
-        cout << arr[i];
-    }
+        key = arr[i];
+        j = i - 1;
 
-    for (int i = 1; i < n; i++)
-    {
-        int current = arr[i];
-        int j = i - 1;
-        while (arr[j] > current && j >= 0)
+        /* Move elements of arr[0..i-1], that are
+		greater than key, to one position ahead
+		of their current position */
+        while (j >= 0 && arr[j] > key)
         {
             arr[j + 1] = arr[j];
-            j--;
+            j = j - 1;
         }
-        arr[j + 1] = current;
+        arr[j + 1] = key;
     }
+}
 
-    for (int i = 0; i < n; i++)
-    {
+// A utility function to print an array of size n
+void printArray(int arr[], int n)
+{
+    int i;
+    for (i = 0; i < n; i++)
         cout << arr[i] << " ";
-    }
     cout << endl;
 }
+
+/* Driver code */
+int main()
+{
+    int arr[] = {7, 4, 2, 8, 1};
+    int n = sizeof(arr) / sizeof(arr[0]);
+
+    insertionSort(arr, n);
+    printArray(arr, n);
+
+    return 0;
+}
+
+// This is code is contributed by rathbhupendra
