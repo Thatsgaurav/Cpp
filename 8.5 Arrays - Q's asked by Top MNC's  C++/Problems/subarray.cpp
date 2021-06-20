@@ -19,7 +19,15 @@ int main()
 
     while (j < n && sum + a[j] <= s)
     {
-        }
+        sum += a[j];
+        j++;
+    }
+
+    if (sum == s)
+    {
+        cout << i + 1 << " " << j << endl;
+        return 0;
+    }
 
     return 0;
 }
