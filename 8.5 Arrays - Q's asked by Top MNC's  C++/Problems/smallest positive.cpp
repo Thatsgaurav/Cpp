@@ -1,6 +1,5 @@
 // You are given an array arr[] of N integers including 0. The task is to find the smallest
 // positive number missing from the array.
-
 #include <iostream>
 using namespace std;
 
@@ -19,7 +18,15 @@ int main()
     bool check[N];
     for (int i = 0; i < N; i++)
     {
-        check[i] = false;
+        check[i] = 0;
+    }
+
+    for (int i = 0; i < n; i++)
+    {
+        if (a[i] >= 0)
+        {
+            check[a[i]] = 1;
+        }
     }
 
     return 0;
