@@ -28,6 +28,17 @@ int main()
             check[a[i]] = 1;
         }
     }
+    int ans = -1;
+    for (int i = 1; i < N; i++)
+    {
+        if (check[i] == false)
+        {
+            ans = i;
+            break;
+        }
+    }
+
+    cout << ans << endl;
 
     return 0;
 }
