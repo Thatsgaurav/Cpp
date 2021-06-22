@@ -15,5 +15,12 @@ int main()
         cin >> a[i];
     }
 
+    const int N = 1e6 + 2;
+    bool check[N];
+    for (int i = 0; i < N; i++)
+    {
+        check[i] = false;
+    }
+
     return 0;
 }
