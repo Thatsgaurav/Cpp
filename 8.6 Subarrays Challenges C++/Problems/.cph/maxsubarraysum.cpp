@@ -16,6 +16,7 @@ int main()
     currsum[0] = 0;
 
     for (int i = 1; i <= n; i++)
+
     {
         currsum[i] = currsum[i - 1] + arr[i - 1];
     }
