@@ -16,7 +16,7 @@ int main()
 #endif
 
     int n, m;
-    cin >> n >> m >> m;
+    cin >> n >> m;
     int arr[n][m];
     for (int i = 0; i < n; i++) {
         for(int j = 0; j < m; j++) {
@@ -24,9 +24,9 @@ int main()
         }
     }
 
-    cout<<"Matric is:\n";
+    cout<<"Matrix is:\n";
     for(int i = 0;i<n;i++) {
-        for (int j = 0 j <m ; j++){
+        for (int j = 0; j < m ; j++) {
             cout<<arr[i][j]<<" ";
         }
         cout<<"\n";
